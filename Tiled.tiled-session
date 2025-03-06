@@ -1,5 +1,7 @@
 {
     "activeFile": "map.tmx",
+    "expandedProjectPaths": [
+    ],
     "fileStates": {
         "Mossy_TileSet.tsx": {
             "scaleInDock": 0.125,
@@ -9,16 +11,18 @@
             "scale": 0.0625,
             "selectedLayer": 0,
             "viewCenter": {
-                "x": 8608,
-                "y": 5960
+                "x": 5664,
+                "y": 5144
             }
         }
     },
     "openFiles": [
         "map.tmx"
     ],
+    "project": "",
     "recentFiles": [
         "map.tmx",
         "Mossy_TileSet.tsx"
-    ]
+    ],
+    "resizeMap.removeObjects": false
 }

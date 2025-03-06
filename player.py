@@ -2,7 +2,7 @@ import pygame
 
 class Player:
     def __init__(self, x, y):
-        self.image = pygame.image.load("asset/character_sprite/idle/idle_0.png")
+        self.sprite = pygame.image.load("asset/character_sprite/idle/idle_0.png")
         self.speed = 5
         self.velocity = [0, 0]  # Vitesse [X, Y]
         self.gravity = 0.5  # Gravité appliquée au joueur
@@ -10,16 +10,31 @@ class Player:
         self.jump_strength = -10  # Puissance du saut
         self.on_ground = False  # Détection du sol
 
-        # Dimensions réduites pour le Rect
-        reduced_width = self.image.get_width() - 14  # Ajustez selon vos besoins
-        reduced_height = self.image.get_height() - 14  # Ajustez selon vos besoins
-        
-        # Décalage du Rect
-        offset_x = -7  # Décalage horizontal
-        offset_y = -7  # Décalage vertical
+        self.sprite_width = 80
+        self.sprite_height = 80
 
-        # Créer un Rect plus petit
-        self.rect = pygame.Rect(x+offset_x, y+offset_y, reduced_width, reduced_height)
+        # Redimensionner l'image
+        self.image = pygame.transform.scale(self.sprite, (self.sprite_width, self.sprite_height))
+
+        # Dimensions réduites pour le Rect
+        hitbox_width = self.sprite_width * 0.5  # 50% de la largeur du sprite
+        hitbox_height = self.sprite_height * 0.8  # 80% de la hauteur du sprite
+        
+        # Calculer les offsets pour centrer le rect
+        offset_x = (self.sprite_width - hitbox_width) / 2
+        offset_y = (self.sprite_height - hitbox_height) / 2
+
+        # Créer un Rect centré
+        self.rect = pygame.Rect(
+            x,  # Position X sans décalage supplémentaire
+            y,  # Position Y sans décalage supplémentaire
+            hitbox_width,
+            hitbox_height
+        )
+
+        # Stocker les offsets pour l'affichage
+        self.display_offset_x = -offset_x
+        self.display_offset_y = -offset_y
 
     def apply_gravity(self):
         """Applique la gravité si le joueur est en l'air."""
@@ -58,9 +73,21 @@ class Player:
                     self.rect.top = tile.bottom
                     self.velocity[1] = 0
 
-    def draw(self, screen):
+    def draw(self, screen, camera_x=0, camera_y=0):
         """Affiche le joueur sur l'écran."""
-        screen.blit(self.image, self.rect)
+        # Position d'affichage ajustée avec la caméra
+        display_x = self.rect.x - camera_x + self.display_offset_x
+        display_y = self.rect.y - camera_y + self.display_offset_y
+        screen.blit(self.image, (display_x, display_y))
+        
+        # DEBUG: Afficher la hitbox en rouge (ajustée avec la caméra)
+        debug_rect = pygame.Rect(
+            self.rect.x - camera_x,
+            self.rect.y - camera_y,
+            self.rect.width,
+            self.rect.height
+        )
+        pygame.draw.rect(screen, (255, 0, 0), debug_rect, 2)
 
     def handle_input(self):
         """Gestion des touches pour déplacer le joueur."""
@@ -84,7 +111,8 @@ class Player:
     def animate_idle(self):
         frame_rate = 30
         for frame in range(2):
-            self.image = pygame.image.load(f"asset/character_sprite/idle/idle_{frame}.png")
+            original_image = pygame.image.load(f"asset/character_sprite/idle/idle_{frame}.png")
+            self.image = pygame.transform.scale(original_image, (self.sprite_width, self.sprite_height))
             pygame.time.delay(frame_rate)
     def animate_idle2(self):
         pass
