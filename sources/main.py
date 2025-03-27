@@ -121,10 +121,10 @@ class Game:
         self.map_loader.debug(self.screen, self.camera_x, self.camera_y)
 
 pygame.init()
-# Démarrer en mode fenêtré avec bordures (non redimensionnable)
+pygame.display.set_caption("NameLess")
+icon = pygame.image.load("../data/asset/images/logo.png")
+pygame.display.set_icon(icon)
 screen = pygame.display.set_mode((0, 0), pygame.FULLSCREEN)
-# Définir le titre de la fenêtre
-pygame.display.set_caption("Il faut un nom les gars vrm")
 
 menu = main_menu(screen)
 game = Game(screen)

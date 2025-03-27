@@ -9,14 +9,14 @@
     "file.lastUsedOpenFilter": "Tous les Fichiers (*)",
     "fileStates": {
         "": {
-            "scaleInDock": 1
+            "scaleInDock": 11
         },
         "map.tmx": {
             "scale": 1,
             "selectedLayer": 3,
             "viewCenter": {
-                "x": 3341,
-                "y": 1035.5
+                "x": 1072,
+                "y": 1040.5
             }
         },
         "map.tmx#TX Tileset Ground": {
@@ -49,7 +49,7 @@
             "scaleInDock": 1
         }
     },
-    "last.imagePath": "C:/Users/Manoah Avril/Desktop/Fichier/Programmation/NameLess/Data/asset/Images",
+    "last.imagePath": "C:/Users/Manoah Avril/Downloads",
     "map.lastUsedFormat": "tmx",
     "map.renderOrder": "2",
     "openFiles": [
@@ -63,7 +63,7 @@
     "tileset.embedInMap": true,
     "tileset.spacing": 0,
     "tileset.tileSize": {
-        "height": 32,
-        "width": 32
+        "height": 1,
+        "width": 1
     }
 }

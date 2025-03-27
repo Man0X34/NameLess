@@ -60,7 +60,7 @@ def main_menu(screen):
         # Charger et afficher l'image de l'encadré
         load_frame_image(screen, "../data/asset/menu/scroll.png", box_x/3, box_y/5, box_width*2, box_height*2.25)
 
-       #**ORDRE DES BOUTONS**
+       #ORDRE DES BOUTONS
         keys_x = (screen_width - keys_width) / 2
         keys_y = box_y + 200  # Bouton "option" en haut
 
@@ -89,6 +89,9 @@ def main_menu(screen):
             if event.type == pygame.QUIT:
                 pygame.quit()
                 exit()
+            elif event.type == pygame.KEYDOWN:
+                if event.key == pygame.K_ESCAPE:  # Échap pour quitter
+                    running = False            
             if event.type == pygame.MOUSEBUTTONDOWN:
                 if is_hovered_play:
                     return "jouer"  # Lance le jeu
@@ -97,7 +100,6 @@ def main_menu(screen):
 
         pygame.display.flip()
 
-# 🔽 **AJOUTE ICI LA FONCTION menu_touches(screen)**
 def menu_touches(screen):
     """Affiche le menu des touches et permet de revenir au menu principal."""
     pygame.font.init()
@@ -208,7 +210,6 @@ def game_loop():
     clock = pygame.time.Clock()
     
     main_menu(screen)  # Afficher le menu avant de lancer le jeu
-    
     
     running = True
     while running:

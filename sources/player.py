@@ -228,11 +228,11 @@ class Player:
     def animate(self):
         """Joue les animations en fonction de 'state'."""
         if self.state == "Idle":
-            self.play_animation("Idle", 30)
+            self.play_animation("Idle", 15)
         elif self.state == "Idle2":
-            self.play_animation("Idle2", 30)
+            self.play_animation("Idle2", 20)
         elif self.state == "Walk":
-            self.play_animation("Walk", 10)
+            self.play_animation("Walk", 5)
         elif self.state == "Jump":
             self.play_animation("Jump", 30)
         elif self.state == "Attack":
@@ -242,7 +242,7 @@ class Player:
         elif self.state == "FadeOut":
             self.play_animation("FadeOut", 30)
         elif self.state == "Glide":
-            self.play_animation("Glide", 30)
+            self.play_animation("Glide", 10)
 
     def manage_states(self):
         """Gère les changements d'état en fonction de la vélocité."""
