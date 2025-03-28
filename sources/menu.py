@@ -1,5 +1,12 @@
-#Projet : NameLess
-#Auteurs : Manoah Avril, Link Bernard, Noa Paté
+#-------------------------------------------------------------------------------
+# Name:        main
+# Purpose:     Crée l'écran de menu.
+#
+# Author:      Link
+#
+# Created:     28/03/2025
+# Licence:     GPL v3+
+#-------------------------------------------------------------------------------
 
 import pygame 
 import os

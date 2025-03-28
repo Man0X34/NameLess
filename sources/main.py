@@ -1,5 +1,12 @@
-#Projet : NameLess
-#Auteurs : Manoah Avril, Link Bernard, Noa Paté
+#-------------------------------------------------------------------------------
+# Name:        main
+# Purpose:     Fichier principal, servant à exécuter le jeu.
+#
+# Author:      Manoah
+#
+# Created:     28/03/2025
+# Licence:     GPL v3+
+#-------------------------------------------------------------------------------
 
 import pygame
 from player import *

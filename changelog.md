@@ -19,3 +19,7 @@ Création du fichier .gitignore
 ## changelog.md
 
 Création du fichier changelog.md
+
+## Mise à jour des en-têtes des fichiers python
+
+Changement des en-têtes des fichiers python pour plus de précision et plus d'esthétique.
