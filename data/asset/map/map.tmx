@@ -7,7 +7,7 @@
   <image source="../Images/Texture/TX Village Props.png" width="1024" height="1024"/>
  </tileset>
  <tileset firstgid="1281" name="spikes_asset" tilewidth="32" tileheight="32" tilecount="84" columns="12">
-  <image source="../Images/spikes_asset.png" width="384" height="224"/>
+  <image source="../images/spikes_asset.png" width="384" height="224"/>
  </tileset>
  <layer id="1" name="Ground" width="160" height="60">
   <data encoding="csv">

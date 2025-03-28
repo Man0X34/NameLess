@@ -9,14 +9,26 @@
     "file.lastUsedOpenFilter": "Tous les Fichiers (*)",
     "fileStates": {
         "": {
-            "scaleInDock": 11
+            "scaleInDock": 4
+        },
+        "Spikes.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "TX Tileset Ground.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "TX Village Props.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
         },
         "map.tmx": {
-            "scale": 1,
-            "selectedLayer": 3,
+            "scale": 0.33,
+            "selectedLayer": 1,
             "viewCenter": {
-                "x": 1249,
-                "y": 1040.5
+                "x": 2839.393939393939,
+                "y": 1156.0606060606062
             }
         },
         "map.tmx#TX Tileset Ground": {
@@ -47,9 +59,14 @@
         },
         "menu.tmx#TX Village Props": {
             "scaleInDock": 1
+        },
+        "spikes_asset.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
         }
     },
-    "last.imagePath": "C:/Users/Manoah Avril/Downloads",
+    "last.externalTilesetPath": "C:/Users/Manoah Avril/Desktop/Fichier/Github/Dépôt/NameLess/data/asset/map",
+    "last.imagePath": "C:/Users/Manoah Avril/Desktop/Fichier/Github/Dépôt/NameLess/data/asset/images",
     "map.lastUsedFormat": "tmx",
     "map.renderOrder": "2",
     "openFiles": [
@@ -57,13 +74,19 @@
     ],
     "project": "map.tiled-project",
     "recentFiles": [
-        "map.tmx"
+        "map.tmx",
+        "Spikes.tsx",
+        "TX Tileset Ground.tsx",
+        "TX Village Props.tsx",
+        "spikes_asset.tsx"
     ],
     "resizeMap.removeObjects": false,
-    "tileset.embedInMap": true,
+    "tileset.embedInMap": false,
+    "tileset.lastUsedFilter": "Tous les Fichiers (*)",
+    "tileset.lastUsedFormat": "tsx",
     "tileset.spacing": 0,
     "tileset.tileSize": {
-        "height": 1,
-        "width": 1
+        "height": 32,
+        "width": 32
     }
 }
