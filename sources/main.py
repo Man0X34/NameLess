@@ -1,17 +1,16 @@
 #Projet : NameLess
 #Auteurs : Manoah Avril, Link Bernard, Noa Paté
 
-
 import pygame
 from player import *
 from menu import *
 from map_loader import *
 import os
 
-# Force le fichier à s'ouvrir da  ns "Jeu NSI (car sinon il s'ouvre n'importe où et ne trouve aps les fichiers)
+# Force le fichier à s'ouvrir dans son dossier (car sinon il s'ouvre n'importe où et ne trouve pas les fichiers)
 os.chdir(os.path.dirname(os.path.abspath(__file__)))
 debug_mode = False
-sound = False
+sound = True
 
 class Game:
     def __init__(self, screen):
