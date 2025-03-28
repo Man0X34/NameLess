@@ -5,7 +5,7 @@ import pygame
 
 class Player:
     def __init__(self, x, y):
-        self.sprite = pygame.image.load("../data/asset/images/character_sprite/idle/idle_0.png")
+        self.sprite = pygame.image.load("../data/asset/Images/character_sprite/idle/idle_0.png")
         self.speed = 160  # Vitesse en pixels par seconde
         self.velocity = [0, 0]  # Vitesse [X, Y]
         self.gravity = 700  # Gravité en pixels par seconde au carré
@@ -44,33 +44,32 @@ class Player:
         # Variable d'images
         self.images = {
             "Idle": [
-                pygame.transform.scale(pygame.image.load("../data/asset/images/character_sprite/idle/idle_0.png"), (self.sprite_width, self.sprite_height)),
-                pygame.transform.scale(pygame.image.load("../data/asset/images/character_sprite/idle/idle_1.png"), (self.sprite_width, self.sprite_height)),
+                pygame.transform.scale(pygame.image.load("../data/asset/Images/character_sprite/idle/idle_0.png"), (self.sprite_width, self.sprite_height)),
+                pygame.transform.scale(pygame.image.load("../data/asset/Images/character_sprite/idle/idle_1.png"), (self.sprite_width, self.sprite_height)),
             ],
             "Idle2": [
-                pygame.transform.scale(pygame.image.load("../data/asset/images/character_sprite/idle2/idle2_0.png"), (self.sprite_width, self.sprite_height)),
-                pygame.transform.scale(pygame.image.load("../data/asset/images/character_sprite/idle2/idle2_1.png"), (self.sprite_width, self.sprite_height)),
+                pygame.transform.scale(pygame.image.load("../data/asset/Images/character_sprite/idle2/idle2_0.png"), (self.sprite_width, self.sprite_height)),
+                pygame.transform.scale(pygame.image.load("../data/asset/Images/character_sprite/idle2/idle2_1.png"), (self.sprite_width, self.sprite_height)),
             ],
             "Walk": [
-                pygame.transform.scale(pygame.image.load("../data/asset/images/character_sprite/walk/walk_0.png"), (self.sprite_width, self.sprite_height)),
-                pygame.transform.scale(pygame.image.load("../data/asset/images/character_sprite/walk/walk_1.png"), (self.sprite_width, self.sprite_height)),
-                pygame.transform.scale(pygame.image.load("../data/asset/images/character_sprite/walk/walk_2.png"), (self.sprite_width, self.sprite_height)),
-                pygame.transform.scale(pygame.image.load("../data/asset/images/character_sprite/walk/walk_3.png"), (self.sprite_width, self.sprite_height)),
+                pygame.transform.scale(pygame.image.load("../data/asset/Images/character_sprite/walk/walk_1.png"), (self.sprite_width, self.sprite_height)),
+                pygame.transform.scale(pygame.image.load("../data/asset/Images/character_sprite/walk/walk_2.png"), (self.sprite_width, self.sprite_height)),
+                pygame.transform.scale(pygame.image.load("../data/asset/Images/character_sprite/walk/walk_3.png"), (self.sprite_width, self.sprite_height)),
             ],
             "JumpStart": [
-                pygame.transform.scale(pygame.image.load("../data/asset/images/character_sprite/jump/jump_0.png"), (self.sprite_width, self.sprite_height)),
-                pygame.transform.scale(pygame.image.load("../data/asset/images/character_sprite/jump/jump_1.png"), (self.sprite_width, self.sprite_height)),
-                pygame.transform.scale(pygame.image.load("../data/asset/images/character_sprite/jump/jump_2.png"), (self.sprite_width, self.sprite_height)),
-                pygame.transform.scale(pygame.image.load("../data/asset/images/character_sprite/jump/jump_3.png"), (self.sprite_width, self.sprite_height)),
+                pygame.transform.scale(pygame.image.load("../data/asset/Images/character_sprite/jump/jump_0.png"), (self.sprite_width, self.sprite_height)),
+                pygame.transform.scale(pygame.image.load("../data/asset/Images/character_sprite/jump/jump_1.png"), (self.sprite_width, self.sprite_height)),
+                pygame.transform.scale(pygame.image.load("../data/asset/Images/character_sprite/jump/jump_2.png"), (self.sprite_width, self.sprite_height)),
+                pygame.transform.scale(pygame.image.load("../data/asset/Images/character_sprite/jump/jump_3.png"), (self.sprite_width, self.sprite_height)),
             ],
             "JumpEnd": [
-                pygame.transform.scale(pygame.image.load("../data/asset/images/character_sprite/jump/jump_4.png"), (self.sprite_width, self.sprite_height)),
-                pygame.transform.scale(pygame.image.load("../data/asset/images/character_sprite/jump/jump_5.png"), (self.sprite_width, self.sprite_height)),
-                pygame.transform.scale(pygame.image.load("../data/asset/images/character_sprite/jump/jump_6.png"), (self.sprite_width, self.sprite_height)),
-                pygame.transform.scale(pygame.image.load("../data/asset/images/character_sprite/jump/jump_7.png"), (self.sprite_width, self.sprite_height)),
+                pygame.transform.scale(pygame.image.load("../data/asset/Images/character_sprite/jump/jump_4.png"), (self.sprite_width, self.sprite_height)),
+                pygame.transform.scale(pygame.image.load("../data/asset/Images/character_sprite/jump/jump_5.png"), (self.sprite_width, self.sprite_height)),
+                pygame.transform.scale(pygame.image.load("../data/asset/Images/character_sprite/jump/jump_6.png"), (self.sprite_width, self.sprite_height)),
+                pygame.transform.scale(pygame.image.load("../data/asset/Images/character_sprite/jump/jump_7.png"), (self.sprite_width, self.sprite_height)),
             ],
             "Glide": [
-                pygame.transform.scale(pygame.image.load("../data/asset/images/character_sprite/jump/jump_4.png"), (self.sprite_width, self.sprite_height)),
+                pygame.transform.scale(pygame.image.load("../data/asset/Images/character_sprite/jump/jump_4.png"), (self.sprite_width, self.sprite_height)),
             ],
         }
 

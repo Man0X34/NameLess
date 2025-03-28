@@ -34,11 +34,11 @@ def main_menu(screen):
     font = pygame.font.Font(None, 50)
 
  # Charger les images du bouton
-    button_normal = pygame.image.load("../data/asset/menu/play1.png")
-    button_hovered = pygame.image.load("../data/asset/menu/play3.png")
+    button_normal = pygame.image.load("../data/asset/Menu/play1.png")
+    button_hovered = pygame.image.load("../data/asset/Menu/play3.png")
 
-    keys_normal = pygame.image.load("../data/asset/menu/keys1.png")
-    keys_hovered = pygame.image.load("../data/asset/menu/keys3.png")
+    keys_normal = pygame.image.load("../data/asset/Menu/keys1.png")
+    keys_hovered = pygame.image.load("../data/asset/Menu/keys3.png")
 
     button_width, button_height = button_normal.get_size()
     keys_width, keys_height = keys_normal.get_size()
@@ -47,7 +47,7 @@ def main_menu(screen):
 
     while running:
         screen.fill((0, 0, 0))
-        load_background("../data/asset/menu/background.png", screen)   ############ a changer plus tard avec image de la map avec ou sans le perso
+        load_background("../data/asset/Menu/background.png", screen)   ############ a changer plus tard avec image de la map avec ou sans le perso
 
         # Récupérer la taille de l'écran
         screen_width, screen_height = screen.get_size()
@@ -58,7 +58,7 @@ def main_menu(screen):
         box_y = screen_height / 3 - 50
 
         # Charger et afficher l'image de l'encadré
-        load_frame_image(screen, "../data/asset/menu/scroll.png", box_x/3, box_y/5, box_width*2, box_height*2.25)
+        load_frame_image(screen, "../data/asset/Menu/scroll.png", box_x/3, box_y/5, box_width*2, box_height*2.25)
 
        #ORDRE DES BOUTONS
         keys_x = (screen_width - keys_width) / 2
@@ -108,7 +108,7 @@ def menu_touches(screen):
     running = True
     while running:
         screen.fill((0, 0, 0))
-        load_background("../data/asset/menu/background.png", screen)   ############ a changer plus tard avec image de la map avec ou sans le perso
+        load_background("../data/asset/Menu/background.png", screen)   ############ a changer plus tard avec image de la map avec ou sans le perso
 
         # Récupérer la taille de l'écran
         screen_width, screen_height = screen.get_size()
@@ -119,7 +119,7 @@ def menu_touches(screen):
         box_y = screen_height / 3 - 50
 
         # Charger l'image de fond de l'encadré (même image que le menu principal)
-        box_background = pygame.image.load("../data/asset/menu/scroll 2.png")
+        box_background = pygame.image.load("../data/asset/Menu/scroll 2.png")
         box_background = pygame.transform.scale(box_background, (box_width, box_height))
 
         # Dessiner l'image de fond pour l'encadré
@@ -133,9 +133,9 @@ def menu_touches(screen):
         screen.blit(title, title_rect)
 
         # Charger les images des touches
-        key_left_image = pygame.image.load("../data/asset/menu/gauche.png")  # Image pour aller à gauche
-        key_right_image = pygame.image.load("../data/asset/menu/droite.png")  # Image pour aller à droite
-        key_space_image = pygame.image.load("../data/asset/menu/space.png")  # Image pour sauter
+        key_left_image = pygame.image.load("../data/asset/Menu/gauche.png")  # Image pour aller à gauche
+        key_right_image = pygame.image.load("../data/asset/Menu/droite.png")  # Image pour aller à droite
+        key_space_image = pygame.image.load("../data/asset/Menu/space.png")  # Image pour sauter
 
         # Agrandir les images x3 pour une meilleure visibilité
         scale_factor = 3
@@ -171,8 +171,8 @@ def menu_touches(screen):
         screen.blit(label_space, (start_x +60, y_position + key_height / 2 - label_space.get_height() / 2))
 
         # Bouton "Retour"
-        button_normal = pygame.image.load("../data/asset/menu/back1.png")
-        button_hovered = pygame.image.load("../data/asset/menu/back3.png")
+        button_normal = pygame.image.load("../data/asset/Menu/back1.png")
+        button_hovered = pygame.image.load("../data/asset/Menu/back3.png")
         
         scale_factor = 2.5  # Facteur d'agrandissement
 

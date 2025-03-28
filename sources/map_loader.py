@@ -5,7 +5,7 @@ import pygame
 from pytmx import *
 
 class MapLoader:
-    def __init__(self, map_file="../data/asset/map/map.tmx"):
+    def __init__(self, map_file="../data/asset/Map/map.tmx"):
         """Charge la carte TMX avec pytmx"""
         self.tmx_data = load_pygame(map_file)
         self.target_tile_size = 48  # Taille cible pour chaque tuile à l'écran

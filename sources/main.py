@@ -34,7 +34,7 @@ class Game:
         if sound:
             # Initialiser et jouer la musique
             pygame.mixer.init()
-            pygame.mixer.music.load("../data/asset/audio/Forest-Under-The-Great-Tree-_Extended.mp3")
+            pygame.mixer.music.load("../data/asset/Audio/Forest-Under-The-Great-Tree-_Extended.mp3")
             pygame.mixer.music.set_volume(0.5)
             pygame.mixer.music.play(-1)
 
